@@ -1,0 +1,73 @@
+CREATE TABLE STUDENT (
+   ADM_NO INT NOT NULL,
+   STD_ID INT NOT NULL,
+   STD_NAM CHAR(25),
+   STD_FNA CHAR(25),
+   STD_SEX CHAR(1),
+   STD_CLA INT(2),
+   STD_SEC CHAR(1),
+   STD_JDT DATE,
+   PRIMARY KEY (ADM_NO,STD_ID)
+  );
+
+INSERT INTO STUDENT (ADM_NO,STD_ID,STD_NAM,STD_FNA,STD_SEX,STD_CLA,STD_SEC,
+   STD_JDT) VALUES (1007,9,'ABDULA','MOHD ABDULA','M',4,'A',20220601);
+
+INSERT INTO STUDENT (ADM_NO,STD_ID,STD_NAM,STD_FNA,STD_SEX,STD_CLA,STD_SEC,
+   STD_JDT) VALUES (1001,2,'KUMAR','MOHAN','M',4,'B',20220609);
+
+INSERT INTO STUDENT (ADM_NO,STD_ID,STD_NAM,STD_FNA,STD_SEX,STD_CLA,STD_SEC,
+   STD_JDT) VALUES (1002,3,'ASHOK','RAMU','M',4,'A',20220609);
+INSERT INTO STUDENT (ADM_NO,STD_ID,STD_NAM,STD_FNA,STD_SEX,STD_CLA,STD_SEC,
+   STD_JDT) VALUES (1003,4,'RAVI','MOHAN','M',4,'A',20220629);
+INSERT INTO STUDENT (ADM_NO,STD_ID,STD_NAM,STD_FNA,STD_SEX,STD_CLA,STD_SEC,
+   STD_JDT) VALUES (1004,5,'RAJU','NARESH','M',4,'B',20220630);
+
+CREATE TABLE masterlog (
+   uname CHAR(20) NOT NULL,
+   upwd  CHAR(12)  NOT NULL,
+   PRIMARY KEY (uname)
+  );
+
+INSERT INTO masterlog (uname,upwd) VALUES ('OMPC','Admin');
+
+INSERT INTO masterlog (uname,upwd) VALUES ('user1','user123');
+
+CREATE TABLE FTRANS (
+   STD_RVOC INTEGER PRIMARY KEY AUTOINCREMENT,
+   ADM_NO INT NOT NULL,
+   STD_ID INT NOT NULL,
+   STD_NAM CHAR(25),
+   STD_FNA CHAR(25),
+   STD_SEX CHAR(1),
+   STD_CLA INT(2),
+   STD_SEC CHAR(1),
+   STD_FDat DATE,
+   STD_FEE  REAL CHECK(STD_FEE >0),
+   STD_REM CHAR(25)
+  );
+
+INSERT INTO FTRANS (ADM_NO,STD_ID,STD_NAM,STD_FNA,STD_SEX,STD_CLA,STD_SEC,STD_FDat,STD_FEE,STD_REM)
+   VALUES (55,11,'NN','JJ','M',5,'B',2022-09-01,5000,'CASH');
+
+INSERT INTO FTRANS (ADM_NO,STD_ID,STD_NAM,STD_FNA,STD_SEX,STD_CLA,STD_SEC,STD_FDat,STD_FEE,STD_REM)
+   VALUES (1021,20,'Shiva Prasad','SKMurthy','M',10,'B',2022-09-01,10000,'CASH');
+
+INSERT INTO FTRANS (ADM_NO,STD_ID,STD_NAM,STD_FNA,STD_SEX,STD_CLA,STD_SEC,STD_FDat,STD_FEE,STD_REM)
+   VALUES (545,54,'kkkk','zzzz','F',5,'A',2022-09-01,15000,'CHQ');
+
+55,11,'NN','JJ','M',5,'B',2022-09-01,5000,'CASH');
+1021,20,'Shiva Prasad','SKMurthy','M',10,'B',2022-09-01,10000,'CASH');
+545,54,'kkkk','zzzz','F',5,'A',2022-09-01,15000,'CHQ');
+6999             89      shiva         kumar       M        9        B        2000-10-10
+58               98      naresh        lkk         M        2        A        2022-10-10
+1111             111     hhhh          llll        M        6        B        2020-10-10
+585              458     kk            hh          F        2        B        2020-10-01
+500              500     NARESH        KUMAR       F        6        B        2012-10-01
+599              566     KKK           JJ          M        5        A        2010-10-10
+52               582     kk            kk          M        1        A        2010-10-10
+58792            587     FFF           KUMAR       M        9        B        2010-01-01
+6998             821     Shiva Prasad  murthy      M        9        A        2022-10-01
+5555             988     LLL           IIIHG       M        6        B        2020-10-10
+58               6985    jj            hh          M        2        A        2022-10-10
+5896             55556   Mohammed      abdulkarim  M        10       A        2022-08-09
